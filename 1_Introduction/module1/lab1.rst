@@ -8,7 +8,7 @@
 Lab 1.1 – Exploring the iControl REST API 
 ------------------------------------------
 
-Task 1 – Explore the API using the TMOS Web Interface
+Task 1 – TMOS 웹 인터페이스를 통해 API를 확인
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this lab we will explore the API using an interface that is built-in
