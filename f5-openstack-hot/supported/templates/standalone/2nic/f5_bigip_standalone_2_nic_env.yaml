@@ -1,0 +1,34 @@
+parameters:
+  bigip_image: BIGIP-13.0.0.2.0.1671
+  bigip_flavor: m1.xlarge
+  use_config_drive: false
+  bigip_os_ssh_key: ocata_lab
+  bigip_admin_pwd: admin
+  bigip_root_pwd: default
+  bigip_license_key: baseLicenseKey
+  bigip_addon_license_keys:
+    - addonKey1
+    - addonKey2
+  bigip_modules:
+    - ltm:None
+    - asm:nominal
+  external_network: public
+  mgmt_network: mgmt
+  mgmt_security_group_name: default2
+  network_vlan_name: external
+  network_vlan_subnet: external_subnet
+  network_vlan_security_group_name: default2
+  bigip_self_ip_addr: 10.0.10.101
+  bigip_self_cidr_block: 10.0.10.0/24
+  bigip_self_port_lockdown:
+    - tcp:4353
+    - tcp:22
+    - tcp:443
+  bigip_default_gateway: 10.0.10.1
+resource_registry:
+  F5::BigIP::OverrideDefaultConfig: ../../../configs/override_default_config.yaml
+  F5::BigIP::OnboardingLibs: ../../../configs/onboarding_libs.yaml
+  F5::BigIP::OnboardingScripts: ../../../configs/onboarding_scripts.yaml
+  F5::BigIP::OnboardNetworkConfig: ../../../configs/onboarding_network_config.yaml
+  F5::BigIP::ManagementSecurityGroup: ../../../security_groups/bigip_mgmt_security_group.yaml
+  F5::BigIP::DataSecurityGroup: ../../../security_groups/bigip_data_security_group.yaml
