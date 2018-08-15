@@ -65,7 +65,7 @@ bin_dir: /usr/local/bin
 ## like you would do when using nova-client before starting the playbook.
 #cloud_provider:
 #cloud_provider:
-cloud_provider:'none'
+cloud_provider:'azure'
 
 ## When azure is used, you need to also set the following variables.
 ## see docs/azure.md for details on how to get these values
